@@ -59,6 +59,8 @@ Hay dos calendarios y los dos cuentan:
 ## Diapositivas
 
 - **Presentación: `presentacion/index.html` (reveal.js 5.1.0 por CDN), la fuente de verdad desde el 09/11.** Elementos que aparecen al pulsar: `class="fragment"` + `data-fragment-index`. Notas: `<aside class="notes">` (tecla S). Imágenes en `presentacion/img/`.
+- **Web (GitHub Pages):** https://jcxk.github.io/pildora_evaluar_modelos_y_metricas/ · `index.html` de la raíz es la home con 3 tarjetas: presentación, descarga del PDF y Kahoot (pendiente: cambiar la tarjeta por un enlace cuando exista).
+- **PDF de descarga** `presentacion/evaluacion-modelos-y-metricas.pdf`: capturas en Chrome sin interfaz de cada diapositiva en estado final (`index.html?export#/N/0/99`; `?export` oculta controles), unidas con `magick`. El modo `?print-pdf` de reveal salía en blanco. Regenerarlo si cambian las diapositivas.
 - Versión anterior (ya no se mantiene): https://claude.ai/artifact/EJB1fz5wqSDNtCvaRV2Aa6, de la que se convirtió.
 - 32 diapositivas con notas del presentador (qué decir, tiempos, preguntas al público).
 - Agenda: contexto (proceso completo de 9 pasos) 4 min → clasificación 20 → regresión 6 → elegir métrica 3 → **caso Titanic 9** → cierre 3 → Kahoot 15.
@@ -77,7 +79,7 @@ Hay dos calendarios y los dos cuentan:
 - **Imágenes de scikit-learn** (`ConfusionMatrixDisplay.from_predictions`, guía: Colab «Tutorial matriz de confusión y métricas» que pasó el usuario): la diapositiva `matriz-grafica` (unida con la antigua `matriz-codigo`: una celda con `confusion_matrix` + `ConfusionMatrixDisplay` y su `Out`, y el Titanic completo 98/12/23/46) y la de multiclase. Ejes en castellano con `disp.ax_.set(xlabel="Valor predicho", ylabel="Valor verdadero")`. Generadas con `make_cm.py` en el scratchpad y subidas como assets del artifact.
 - Las diapositivas de la matriz (`matriz`, `matriz-grafica`) dicen explícitamente que es **clasificación binaria** (2 clases: sobrevive/muere).
 - La matriz de la diapositiva 5 (`matriz`) está en el **orden de scikit-learn** `[[TN, FP], [FN, TP]]` (primero 0 = muere), igual que la imagen de la 6, para no confundir. Otras matrices (ejercicio guiado, candidatos del caso) siguen con TP arriba a la izquierda.
-- Ejercicio guiado (diapositiva `ejercicio`, siempre con el Titanic, sin COVID): «mujeres y niños primero» con 100 pasajeros, TP30 FN8 FP12 TN50 → accuracy 0,80 · precision 0,71 · recall 0,79 · F1 0,75. Recall justo por debajo del 0,80 del caso. En modo Presentar se revela en 9 pulsaciones: fórmula 1 → resultado 1 → … → resultado 4 → respuesta final. Las fórmulas llevan el número de cada casilla entre paréntesis, p. ej. TP (30) / [TP (30) + FP (12)].
+- Ejercicio guiado (diapositiva `ejercicio`, siempre con el Titanic, sin COVID): «mujeres y niños primero» con 100 pasajeros, TP30 FN8 FP12 TN50 → accuracy 0,80 · precision 0,71 · recall 0,79 · F1 0,75. Recall justo por debajo del 0,80 del caso. Se revela en 13 pulsaciones: por cada paso, fórmula con letras (`fade-in-then-out`) → misma fórmula con los números entre paréntesis → resultado; la 13 es la respuesta final. Las fórmulas llevan el número de cada casilla entre paréntesis, p. ej. TP (30) / [TP (30) + FP (12)].
 - Ponente en la portada: Juan Carlos E.
 - Pendiente de rellenar: el PIN en la diapositiva del Kahoot.
 

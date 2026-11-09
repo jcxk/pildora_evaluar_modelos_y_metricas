@@ -2,10 +2,127 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Evaluación de modelos y métricas de rendimiento</title>
-<meta http-equiv="refresh" content="0; url=presentacion/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluación de modelos y métricas</title>
+<meta name="description" content="Píldora de Factoría F5: evaluación de modelos y métricas de rendimiento con el Titanic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+  :root {
+    --ink: #14213D;
+    --paper: #F7F5F0;
+    --card: #FFFDF9;
+    --line: #E2DED5;
+    --muted: #4A5568;
+    --accent: #E07A2F;
+    --accent-dark: #A84F12;
+    --blue: #2F6FB0;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 64px 16px 72px;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .eyebrow {
+    font-size: 14px; letter-spacing: 3px; text-transform: uppercase;
+    color: #F29B54; font-weight: 600;
+  }
+  h1 {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: clamp(36px, 6vw, 64px); line-height: 1.05; font-weight: 700;
+    margin-top: 16px; max-width: 16ch;
+  }
+  .sub { margin-top: 20px; font-size: 20px; color: #C9D3E0; }
+  .meta { margin-top: 28px; font-size: 16px; color: #C9D3E0; }
+  main { flex: 1; padding: 0 16px 64px; }
+  .grid {
+    max-width: 1040px; margin: -40px auto 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;
+  }
+  .card {
+    display: flex; flex-direction: column; gap: 14px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 28px; color: inherit; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(20, 33, 61, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  a.card:hover, a.card:focus-visible {
+    transform: translateY(-3px); border-color: var(--accent);
+    box-shadow: 0 12px 32px rgba(20, 33, 61, 0.14); outline: none;
+  }
+  .icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    display: grid; place-items: center; color: #fff;
+  }
+  .icon svg { width: 28px; height: 28px; }
+  .card h2 { font-family: 'Space Grotesk', Arial, sans-serif; font-size: 26px; font-weight: 700; }
+  .card p { color: var(--muted); font-size: 16px; line-height: 1.5; flex: 1; }
+  .cta { font-weight: 600; color: var(--accent-dark); font-size: 16px; }
+  .card.pending { background: #F1EEE7; cursor: not-allowed; border-style: dashed; }
+  .card.pending h2 { color: var(--muted); }
+  .card.pending .cta { color: var(--muted); }
+  .tag {
+    align-self: flex-start; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+    font-weight: 600; background: var(--line); color: var(--muted); padding: 4px 10px; border-radius: 999px;
+  }
+  footer { padding: 24px 16px 40px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer a { color: inherit; }
+</style>
 </head>
 <body>
-<p><a href="presentacion/">Ir a la presentación</a></p>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Píldora · M2 Data Analytics &amp; Machine Learning · Factoría F5</p>
+    <h1>Evaluación de modelos y métricas de rendimiento</h1>
+    <p class="sub">¿Cómo sabemos si un modelo es bueno? Con el Titanic, de la matriz de confusión al modelo elegido.</p>
+    <p class="meta">Juan Carlos E · 11 de noviembre de 2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="grid">
+    <a class="card" href="presentacion/">
+      <span class="icon" style="background: var(--blue)" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M10 7.5v5l4-2.5z" fill="currentColor"/></svg>
+      </span>
+      <h2>Ver la presentación</h2>
+      <p>32 diapositivas paso a paso. Espacio para avanzar, S para las notas del ponente y F para pantalla completa.</p>
+      <span class="cta">Abrir →</span>
+    </a>
+
+    <a class="card" href="presentacion/evaluacion-modelos-y-metricas.pdf" download>
+      <span class="icon" style="background: var(--accent)" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      </span>
+      <h2>Descargar en PDF</h2>
+      <p>Todas las diapositivas con cada paso ya resuelto, incluido el ejercicio guiado, para repasar después.</p>
+      <span class="cta">Descargar PDF (4 MB) ↓</span>
+    </a>
+
+    <div class="card pending" aria-disabled="true">
+      <span class="icon" style="background: var(--muted)" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><circle cx="17" cy="7" r="4"/><path d="M7 13.5 3 21h8z"/><rect x="13" y="13" width="8" height="8" rx="1.5" transform="rotate(45 17 17)"/></svg>
+      </span>
+      <span class="tag">Pendiente</span>
+      <h2>Jugar al Kahoot</h2>
+      <p>15 minutos de preguntas para repasar lo aprendido. El enlace estará disponible el día de la píldora.</p>
+      <span class="cta">Próximamente</span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a href="https://github.com/jcxk/pildora_evaluar_modelos_y_metricas">Código en GitHub</a>
+</footer>
 </body>
 </html>

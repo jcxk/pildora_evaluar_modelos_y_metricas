@@ -6,7 +6,7 @@ Píldora del módulo M2 · Data Analytics & Machine Learning (Factoría F5, P1 I
 
 ## Presentación
 
-**En línea:** https://jcxk.github.io/pildora_evaluar_modelos_y_metricas/
+**En línea:** https://jcxk.github.io/pildora_evaluar_modelos_y_metricas/ (inicio con la presentación, el PDF y el Kahoot)
 
 En local: abre [`presentacion/index.html`](presentacion/index.html) en el navegador (necesita internet para las fuentes y reveal.js).
 
@@ -16,6 +16,8 @@ En local: abre [`presentacion/index.html`](presentacion/index.html) en el navega
 | S | Vista del ponente con las notas |
 | F | Pantalla completa |
 | Esc | Vista general de todas las diapositivas |
+
+El PDF de descarga (`presentacion/evaluacion-modelos-y-metricas.pdf`) muestra cada diapositiva en su estado final, con todos los pasos resueltos. Si cambias la presentación, hay que regenerarlo.
 
 Cada diapositiva es un `<section>` de 1920×1080 dentro de `presentacion/index.html`. Para que algo aparezca al pulsar, añádele `class="fragment"` y `data-fragment-index="N"` (el orden). Las notas del ponente van en `<aside class="notes">`.
 
