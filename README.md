@@ -6,7 +6,9 @@ Píldora del módulo M2 · Data Analytics & Machine Learning (Factoría F5, P1 I
 
 ## Presentación
 
-Abre [`presentacion/index.html`](presentacion/index.html) en el navegador (necesita internet para las fuentes y reveal.js).
+**En línea:** https://jcxk.github.io/pildora_evaluar_modelos_y_metricas/
+
+En local: abre [`presentacion/index.html`](presentacion/index.html) en el navegador (necesita internet para las fuentes y reveal.js).
 
 | Tecla | Qué hace |
 |---|---|
