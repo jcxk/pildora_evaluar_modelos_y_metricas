@@ -51,6 +51,8 @@ Hay dos calendarios y los dos cuentan:
 | `RESOURCES.md` | Lo que se les ha enseñado hasta ahora (EDA Titanic) |
 | `CALENDAR_TALKS.md` | Calendario de píldoras |
 | `COURSE_CALENDAR.md` | Calendario oficial del curso |
+| (externo) [IA-Workshop-Modelos-Clasificacion](https://github.com/Factoria-F5-madrid/IA-Workshop-Modelos-Clasificacion) | **La lección** que ya han visto. Cada rama es un tema: `1`–`4` modelos, **`5-metricas-evaluacion`** (matriz, precision, recall, F1, ROC-AUC con un ejemplo de banco), `6-pokemon-ejemplo` (proyecto completo con GridSearchCV y `classification_report`), `ejercicio-clasificacion` (Spotify binario y multiclase) |
+| (externo) [AI-Project-Clasificacion-Multiclase](https://github.com/Factoria-F5-madrid/AI-Project-Clasificacion-Multiclase) | Enunciado de un proyecto multiclase: idea de lo que se espera del alumno (P, R y F1 por clase, matriz, overfitting < 5 %, tests de métricas mínimas) |
 | `demo_metricas_titanic.ipynb` | Notebook con el Titanic completo. Ya no se usa en vivo; de él salen los números reales (46/23/12/98) |
 | `presentacion/` | La presentación en HTML (reveal.js) |
 | `slides/` | (Solo local, no se sube) Capturas y transcripciones de dos vídeos de Código Máquina (métricas de clasificación y de regresión), la referencia de estilo |
@@ -80,6 +82,7 @@ Hay dos calendarios y los dos cuentan:
 - Las diapositivas de la matriz (`matriz`, `matriz-grafica`) dicen explícitamente que es **clasificación binaria** (2 clases: sobrevive/muere).
 - La matriz de la diapositiva 5 (`matriz`) está en el **orden de scikit-learn** `[[TN, FP], [FN, TP]]` (primero 0 = muere), igual que la imagen de la 6, para no confundir. Otras matrices (ejercicio guiado, candidatos del caso) siguen con TP arriba a la izquierda.
 - Ejercicio guiado (diapositiva `ejercicio`, siempre con el Titanic, sin COVID): «mujeres y niños primero» con 100 pasajeros, TP30 FN8 FP12 TN50 → accuracy 0,80 · precision 0,71 · recall 0,79 · F1 0,75. Recall justo por debajo del 0,80 del caso. Se revela en 13 pulsaciones: por cada paso, fórmula con letras (`fade-in-then-out`) → misma fórmula con los números entre paréntesis → resultado; la 13 es la respuesta final. Las fórmulas llevan el número de cada casilla entre paréntesis, p. ej. TP (30) / [TP (30) + FP (12)].
+- **Coherencia con la lección del workshop** (10/11): la lección dibuja la matriz con TP arriba a la izquierda y llama «precisión» a precision, «sensibilidad» a recall y «exactitud» a accuracy. Por eso la diapositiva `matriz` avisa del orden de scikit-learn, la `chuleta` tiene una línea de equivalencias, `multiclase` muestra el `Out` real de `classification_report` (P, R y F1 por clase) y `caso-arbol` conecta los 16 puntos train/test con el límite del 5 % del proyecto.
 - Ponente en la portada: Juan Carlos E.
 - Pendiente de rellenar: el PIN en la diapositiva del Kahoot.
 
@@ -96,6 +99,5 @@ Hay dos calendarios y los dos cuentan:
 ## Pendiente
 
 - [ ] Preparar las preguntas del Kahoot (en castellano, varias de cálculo).
-- [ ] Decidir dónde va el inglés (lo decide el usuario).
 - [x] Repositorio en GitHub con README.
 - [ ] Opcional: artículo en Medium.
